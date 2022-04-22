@@ -1,0 +1,36 @@
+﻿<Page x:Class="Andreeva_TZv2.Borrow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Andreeva_TZv2"
+      mc:Ignorable="d"  Width="363" Height="440"
+      Title="Borrow"
+      
+>
+
+    <Grid>
+        <Border Grid.Row="1" Grid.Column="1" Margin="0,10,10,10" Background = "#FF545454" BorderThickness="0">
+            <Grid>
+
+                <TextBlock Foreground="DarkGray" Text="Логин клиента: " RenderTransformOrigin="0.515,0.486" Margin="38,10,195,386" FontSize="14"/>
+                <ComboBox IsReadOnly="True" HorizontalAlignment="Left" Margin="163,8,0,0" VerticalAlignment="Top" Width="124" RenderTransformOrigin="5.223,1.388" Height="26" Name="loginClient" FontSize="14"/>
+                <Button Foreground="White" Background="#FF1D1D1D" Content="Зарегистрировать" Margin="10,82,10,300" Click="Button_Click_2"/>
+                <Button Foreground="White" Background="#FF1D1D1D" Content="Информация о номере" Margin="10,273,10,110" Click="Button_Click_1"/>
+                <TextBlock Foreground="DarkGray" Text="Номер в отеле: " Margin="71,224,166,169" FontSize="14"/>
+                <TextBox  x:Name="NumberRoomHotel" Foreground="Black" Background="Transparent" BorderThickness="0,0,0,0"  Margin="176,221,125,169" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" IsReadOnly="True" Cursor="Arrow"/>
+
+                <TextBox Foreground="DarkGray" Text="Дата заселения" x:Name="DataZaseleniya" Style="{DynamicResource TextBoxK}" HorizontalAlignment="Left" Height="27" Margin="21,156,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="137" LostFocus="TextBox_LostFocus_1" GotFocus="TextBox_GotFocus_1" FontSize="14"/>
+
+                <TextBox Foreground="DarkGray" Text="Кол-во дней:" x:Name="CountDay" Style="{DynamicResource TextBoxK}" HorizontalAlignment="Left" Height="30" Margin="191,153,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="134" LostFocus="TextBox_LostFocus" GotFocus="TextBox_GotFocus" FontSize="14"/>
+
+                <TextBlock Foreground="DarkGray" Text="Итоговая стоимость:" Margin="10,323,207,64" FontSize="14"/>
+                <TextBox x:Name="PriceBox" Margin="209,323,10,64" Foreground="Gray" Background="Transparent" BorderThickness="0,0,0,3" IsReadOnly="True" Cursor="Arrow" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+
+
+                <Button Background="#FF1D1D1D" Foreground="White" BorderThickness="0" Margin="10,376,10,10" Content="Забронировать" Click="Button_Click"/>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
