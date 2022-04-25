@@ -22,6 +22,7 @@ namespace Andreeva_TZv2.BD
         public System.DateTime SettlementDate { get; set; }
     
         public virtual Administrator Administrator { get; set; }
+        public virtual BookingHistory BookingHistory { get; set; }
         public virtual InfoRoom InfoRoom { get; set; }
         public virtual Client Client1 { get; set; }
     }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="427e6523549d4d0bb62d34d7e93bd69c" Name="Diagram1">
+        <EntityTypeShape EntityType="DayAndNightEntitiesModel.sysdiagrams" Width="1.5" PointX="11.625" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DayAndNightEntitiesModel.Administrator" Width="1.5" PointX="3.75" PointY="0.875" FillColor="Red" />
+        <EntityTypeShape EntityType="DayAndNightEntitiesModel.BookingHistory" Width="1.5" PointX="8.25" PointY="1" FillColor="Black" />
+        <EntityTypeShape EntityType="DayAndNightEntitiesModel.BorrowRoom" Width="1.5" PointX="6" PointY="0.5" FillColor="Cyan" />
+        <EntityTypeShape EntityType="DayAndNightEntitiesModel.Client" Width="1.5" PointX="8.25" PointY="3.25" FillColor="128, 255, 128" />
+        <EntityTypeShape EntityType="DayAndNightEntitiesModel.InfoRoom" Width="1.5" PointX="3.75" PointY="3.25" FillColor="Yellow" />
+        <EntityTypeShape EntityType="DayAndNightEntitiesModel.Role" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" FillColor="255, 128, 255" />
+        <AssociationConnector Association="DayAndNightEntitiesModel.BorrowRoom_fk2" />
+        <AssociationConnector Association="DayAndNightEntitiesModel.FK_Administrator_Role" />
+        <AssociationConnector Association="DayAndNightEntitiesModel.BookingHistory_fk0" />
+        <AssociationConnector Association="DayAndNightEntitiesModel.BorrowRoom_fk0" />
+        <AssociationConnector Association="DayAndNightEntitiesModel.BorrowRoom_fk1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

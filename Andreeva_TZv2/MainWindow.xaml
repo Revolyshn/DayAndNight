@@ -73,5 +73,6 @@
                 <Button BorderThickness="0" Background="#FF1D1D1D" Foreground="White" Content="Выйти из системы" FontFamily="Exo2" Click="Button_Click_1" FontSize="14" Grid.Row="3" Margin="94,1,95,10"/>
             </Grid>
         </Border>
+        <Frame x:Name="AuthFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

@@ -12,18 +12,17 @@ namespace Andreeva_TZv2.BD
     using System;
     using System.Collections.Generic;
     
-    public partial class Client
+    public partial class Role
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Client()
+        public Role()
         {
-            this.BorrowRoom = new HashSet<BorrowRoom>();
+            this.Administrator = new HashSet<Administrator>();
         }
     
-        public string Login { get; set; }
         public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BorrowRoom> BorrowRoom { get; set; }
+        public virtual ICollection<Administrator> Administrator { get; set; }
     }
 }

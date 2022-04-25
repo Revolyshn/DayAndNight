@@ -49,11 +49,13 @@ namespace Andreeva_TZv2
         {
             InitializeComponent();
             FillDAtaBase();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (Login.Text != null)
+            
+                if (Login.Text != null)
             {
                 string login = Login.Text;
 
@@ -140,7 +142,20 @@ namespace Andreeva_TZv2
                 box.Foreground = (Brush)bc.ConvertFrom("#404142");
             }
         }
-        //Спектакль Джо - Портрет
+
+        void AuthSuperUser()
+        {
+            int count = Lib.Connector.GetModel().Administrator.Count();
+            if(count == 0)
+            {
+                BD.Administrator admin = new BD.Administrator();
+                Lib.Connector.GetModel().Administrator.Add(admin);
+                Lib.Connector.GetModel().SaveChanges();
+
+                AuthFrame.Navigate(new SuperUserReg());
+            }
+        }
+
     }
 }
 
