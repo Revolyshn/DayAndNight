@@ -41,7 +41,7 @@ namespace Andreeva_TZv2
     {
         static Functional _functional;
         BD.DayAndNightEntities andreeva_TZ = new BD.DayAndNightEntities();
-        BD.Administrator admin;
+        BD.user admin;
         static bool InKognito = true;
 
 
@@ -62,7 +62,7 @@ namespace Andreeva_TZv2
                 if (Password.Password != null || Password.Password != "Введите пароль")
                 {
                     string password = Password.Password;
-                    BD.Administrator basa = (BD.Administrator)andreeva_TZ.Administrator.FirstOrDefault(a => a.login == login && a.Password == password);
+                    BD.user basa = (BD.user)andreeva_TZ.user.FirstOrDefault(a => a.login == login && a.password == password);
                     if (basa != null)
                     {
                         admin = basa;
@@ -145,11 +145,11 @@ namespace Andreeva_TZv2
 
         void AuthSuperUser()
         {
-            int count = Lib.Connector.GetModel().Administrator.Count();
+            int count = Lib.Connector.GetModel().user.Count();
             if(count == 0)
             {
-                BD.Administrator admin = new BD.Administrator();
-                Lib.Connector.GetModel().Administrator.Add(admin);
+                BD.user admin = new BD.user();
+                Lib.Connector.GetModel().user.Add(admin);
                 Lib.Connector.GetModel().SaveChanges();
 
                 AuthFrame.Navigate(new SuperUserReg());

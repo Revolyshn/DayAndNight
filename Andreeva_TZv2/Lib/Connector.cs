@@ -8,26 +8,16 @@ namespace Andreeva_TZv2.Lib
 {
     internal class Connector
     {
-        private static BD.Administrator profile;
-        private static BD.DayAndNightEntities _connector;
+        private static BD.user profile;
+        private static BD.DayAndNightEntities connector;
 
-        public Connector(BD.Administrator _profile)
+        public static BD.user GetMyProfile()
         {
-           _profile = profile;
-        }
-        void Connection()
-        {
-            _connector = new BD.DayAndNightEntities();
-            Connector.GetMyProfile();
-        }
-
-        public static BD.Administrator GetMyProfile()
-        {
-            return profile = new BD.Administrator();
+            return profile = new BD.user();
         }
         public static BD.DayAndNightEntities GetModel()
         {
-            return _connector = new BD.DayAndNightEntities();
+            return connector = new BD.DayAndNightEntities();
         }
 
     }

@@ -12,22 +12,26 @@ namespace Andreeva_TZv2.BD
     using System;
     using System.Collections.Generic;
     
-    public partial class InfoRoom
+    public partial class borrow_room
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public InfoRoom()
+        public borrow_room()
         {
-            this.BorrowRoom = new HashSet<BorrowRoom>();
+            this.booking_history = new HashSet<booking_history>();
         }
     
-        public int NumberRoom { get; set; }
-        public int CountRoom { get; set; }
-        public int Capacity { get; set; }
-        public string TypeRoom { get; set; }
-        public double Price { get; set; }
-        public string RoomDescription { get; set; }
+        public int id { get; set; }
+        public int room { get; set; }
+        public string client { get; set; }
+        public string administrator { get; set; }
+        public string status { get; set; }
+        public int count_day { get; set; }
+        public System.DateTime date_settlement { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BorrowRoom> BorrowRoom { get; set; }
+        public virtual ICollection<booking_history> booking_history { get; set; }
+        public virtual info_room info_room { get; set; }
+        public virtual client client1 { get; set; }
+        public virtual user user { get; set; }
     }
 }

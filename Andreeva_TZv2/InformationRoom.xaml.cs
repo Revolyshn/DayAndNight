@@ -25,7 +25,7 @@ namespace Andreeva_TZv2
         int countDay;
         TextBox price;
 
-        double priceRoom;
+        decimal priceRoom;
 
         BD.DayAndNightEntities andreeva_TZ = new BD.DayAndNightEntities();
         public InformationRoom(int _numberRoom, TextBox text, int _countDay, TextBox _price)
@@ -37,13 +37,13 @@ namespace Andreeva_TZv2
             price = _price;
             if (numberRoom != 0)
             {
-                BD.InfoRoom basa = (BD.InfoRoom)andreeva_TZ.InfoRoom.Where(a => a.NumberRoom == numberRoom).FirstOrDefault();
+                BD.info_room basa = (BD.info_room)andreeva_TZ.info_room.Where(a => a.num_room == numberRoom).FirstOrDefault();
                 if (basa != null)
                 {
-                    CountRoom.Text = basa.CountRoom.ToString();
-                    priceRoom = basa.Price;
-                    Price.Text = basa.Price.ToString();
-                    Info.Text = basa.RoomDescription;
+                    CountRoom.Text = basa.count_room.ToString();
+                    priceRoom = basa.price;
+                    Price.Text = basa.price.ToString();
+                    Info.Text = basa.short_description;
                 }
             }
             else

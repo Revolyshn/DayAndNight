@@ -37,14 +37,14 @@ namespace Andreeva_TZv2
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {  
-            if((BD.Client)andreeva_tz.Client.Where(a => a.Login == PhoneClient.Text).FirstOrDefault() == null)
+            if((BD.client)andreeva_tz.client.Where(a => a.phone == PhoneClient.Text).FirstOrDefault() == null)
             {
-                BD.Client client = new BD.Client
+                BD.client client = new BD.client
                 {
-                    Login = PhoneClient.Text,
-                    Name = NameBox.Text
+                    phone = PhoneClient.Text,
+                    name = NameBox.Text
                 };
-                andreeva_tz.Client.Add(client);
+                andreeva_tz.client.Add(client);
                 andreeva_tz.SaveChanges();
                 ComboBoxLogin();
             }
@@ -57,9 +57,9 @@ namespace Andreeva_TZv2
         private void ComboBoxLogin()
         {
             login.Items.Clear();
-            foreach (BD.Client r in andreeva_tz.Client.ToList())
+            foreach (BD.client r in andreeva_tz.client.ToList())
             {
-                login.Items.Add(r.Login);
+                login.Items.Add(r.phone);
             }
         }
 

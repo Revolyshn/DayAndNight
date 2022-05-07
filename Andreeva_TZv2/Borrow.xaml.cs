@@ -20,13 +20,13 @@ namespace Andreeva_TZv2
     /// </summary>
     public partial class Borrow : Page
     {
-        BD.Administrator admin;
+        BD.user admin;
         Registration registration;
         static DataRoom informationRoom;
 
         BD.DayAndNightEntities andreeva_TZ = new BD.DayAndNightEntities();
 
-        public Borrow(BD.Administrator _admin)
+        public Borrow(BD.user _admin)
         {
             InitializeComponent();
             ComboBoxLogin();
@@ -39,17 +39,17 @@ namespace Andreeva_TZv2
                 CountDay.Text != null &&
                 DataZaseleniya.Text != null)
             {
-                BD.Administrator adminHotel = andreeva_TZ.Administrator.FirstOrDefault(a => a.login == admin.login);
-                BD.Client client = andreeva_TZ.Client.FirstOrDefault(a => a.Login == loginClient.Text);
-                BD.BorrowRoom borrow = new BD.BorrowRoom
+                BD.user adminHotel = andreeva_TZ.user.FirstOrDefault(a => a.login == admin.login);
+                BD.client client = andreeva_TZ.client.FirstOrDefault(a => a.phone == loginClient.Text);
+                BD.borrow_room borrow = new BD.borrow_room
                 {
-                    Room = int.Parse(NumberRoomHotel.Text),
-                    CountDay = int.Parse(CountDay.Text),
-                    Client = loginClient.Text,
-                    Administrotor = adminHotel.login,
-                    SettlementDate = DateTime.Parse(DataZaseleniya.Text)
+                    room = int.Parse(NumberRoomHotel.Text),
+                    count_day = int.Parse(CountDay.Text),
+                    client = loginClient.Text,
+                    administrator = adminHotel.login,
+                    date_settlement = DateTime.Parse(DataZaseleniya.Text)
                 };
-                andreeva_TZ.BorrowRoom.Add(borrow);
+                andreeva_TZ.borrow_room.Add(borrow);
                 andreeva_TZ.SaveChanges();
             }
             else
@@ -80,9 +80,9 @@ namespace Andreeva_TZv2
         }
         private void ComboBoxLogin()
         {
-            foreach (BD.Client r in andreeva_TZ.Client.ToList())
+            foreach (BD.client r in andreeva_TZ.client.ToList())
             {
-                loginClient.Items.Add(r.Login);
+                loginClient.Items.Add(r.phone);
             }
         }
 
