@@ -117,14 +117,17 @@
     <Compile Include="Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SUser\SuperUserReg.xaml.cs">
+    <Compile Include="SuperUserReg.xaml.cs">
       <DependentUpon>SuperUserReg.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SUser\SUserWin.xaml.cs">
-      <DependentUpon>SUserWin.xaml</DependentUpon>
+    <Compile Include="SUserAuth.xaml.cs">
+      <DependentUpon>SUserAuth.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SUser\SUserLogin.xaml.cs">
-      <DependentUpon>SUserLogin.xaml</DependentUpon>
+    <Compile Include="SUserFunctional.xaml.cs">
+      <DependentUpon>SUserFunctional.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SUserHome.xaml.cs">
+      <DependentUpon>SUserHome.xaml</DependentUpon>
     </Compile>
     <Page Include="Borrow.xaml">
       <SubType>Designer</SubType>
@@ -177,15 +180,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SUser\SuperUserReg.xaml">
+    <Page Include="SuperUserReg.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SUser\SUserWin.xaml">
+    <Page Include="SUserAuth.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SUser\SUserLogin.xaml">
+    <Page Include="SUserFunctional.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SUserHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

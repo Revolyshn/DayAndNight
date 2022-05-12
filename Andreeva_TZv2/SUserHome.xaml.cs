@@ -15,28 +15,25 @@ using System.Windows.Shapes;
 namespace Andreeva_TZv2
 {
     /// <summary>
-    /// Логика взаимодействия для SUser.xaml
+    /// Логика взаимодействия для SUserHome.xaml
     /// </summary>
-    public partial class SUserWin : Window
+    public partial class SUserHome : Window
     {
-        SuperUserReg super =  new SuperUserReg();
-        SUser.SUserLogin login = new SUser.SUserLogin();
-
-        public SUserWin()
+        public SUserHome()
         {
             InitializeComponent();
             CheckExistSUser();
         }
         void CheckExistSUser()
         {
-            BD.user super_admin = Lib.Connector.GetModel().user.FirstOrDefault(a => a.role != null && a.role == "Super_User");
+            BD.user super_admin = Lib.Connector.DataBase().user.FirstOrDefault(a => a.role != null && a.role == "Super_User");
             if (super_admin == null)
             {
-                SUserFrame.Navigate(super);
+                SUserFrame.Navigate(Lib.Pages.registration);
             }
             else
             {
-                SUserFrame.Navigate(login);
+                SUserFrame.Navigate(Lib.Pages.authorization);
             }
         }
     }

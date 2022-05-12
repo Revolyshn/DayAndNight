@@ -145,12 +145,12 @@ namespace Andreeva_TZv2
 
         void AuthSuperUser()
         {
-            int count = Lib.Connector.GetModel().user.Count();
+            int count = Lib.Connector.DataBase().user.Count();
             if(count == 0)
             {
                 BD.user admin = new BD.user();
-                Lib.Connector.GetModel().user.Add(admin);
-                Lib.Connector.GetModel().SaveChanges();
+                Lib.Connector.DataBase().user.Add(admin);
+                Lib.Connector.DataBase().SaveChanges();
 
                 AuthFrame.Navigate(new SuperUserReg());
             }

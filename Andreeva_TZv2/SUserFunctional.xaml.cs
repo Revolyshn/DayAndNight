@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace Andreeva_TZv2
 {
     /// <summary>
-    /// Логика взаимодействия для SuperUserReg.xaml
+    /// Логика взаимодействия для SUserFunctional.xaml
     /// </summary>
-    public partial class SuperUserReg : Page
+    public partial class SUserFunctional : Page
     {
-        public SuperUserReg()
+        public SUserFunctional()
         {
             InitializeComponent();
-        }
-
-        private void regSuperUser_btn_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
