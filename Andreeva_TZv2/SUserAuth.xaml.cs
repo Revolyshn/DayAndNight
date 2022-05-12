@@ -70,10 +70,5 @@ namespace Andreeva_TZv2
             }
             return;
         }
-
-        private void RegisterNew_btn_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(Lib.Pages.registration);
-        }
     }
 }

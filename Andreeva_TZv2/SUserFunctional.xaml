@@ -9,6 +9,38 @@
       Title="SUserFunctional">
 
     <Grid>
-        
+        <TabControl  Background="#FF212121" >
+            <TabItem Background="Gray" Header="Администрация">
+                <Grid Background="#FF212121">
+                    <ScrollViewer Margin="10,0,0,50" HorizontalAlignment="Left" Width="445" Height="322" VerticalAlignment="Bottom">
+                        <StackPanel x:Name="ListUser"></StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+            <TabItem Background="Gray" Header="Номера отеля">
+                <Grid Background="#FF212121">
+                    <ScrollViewer Margin="10,0,0,0" HorizontalAlignment="Left" Width="286" Height="350" VerticalAlignment="Center">
+                        <StackPanel x:Name="ListRoom"></StackPanel>
+                    </ScrollViewer>
+                    <Border Margin="0,0,10,0" Height="402" VerticalAlignment="Center" HorizontalAlignment="Right" Width="483">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="47*"/>
+                                <RowDefinition Height="47*"/>
+                                <RowDefinition Height="47*"/>
+                                <RowDefinition Height="47*"/>
+                                <RowDefinition Height="103*"/>
+                                <RowDefinition Height="34*"/>
+                                <RowDefinition Height="89*"/>
+                            </Grid.RowDefinitions>
+                            <Button Content="Изменить" HorizontalAlignment="Right" Margin="0,0,382,0" Grid.Row="6" VerticalAlignment="Center" Height="34" Width="91"/>
+                            <Button Content="Сохранить изменения" HorizontalAlignment="Left" Margin="106,0,0,0" Grid.Row="6" VerticalAlignment="Center" Height="34" Width="136"/>
+
+                        </Grid>
+                    </Border>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Page>
