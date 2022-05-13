@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Andreeva_TZv2"
         mc:Ignorable="d"
+        ResizeMode="CanMinimize"
         Title="SUserHome" Height="450" Width="800" Background="#FF212121">
     <Grid>
         <Frame x:Name="SUserFrame" NavigationUIVisibility="Hidden"></Frame>
