@@ -52,13 +52,20 @@
                             </Grid.RowDefinitions>
                             <Button x:Name="Change_btn" Content="Изменить" HorizontalAlignment="Right" Margin="0,39,197,0" Grid.Row="8" VerticalAlignment="Top" Height="24" Width="182" Click="Change_btn_Click"/>
                             <ComboBox x:Name="UserList_cb" Margin="5,0,5,0" SelectedItem="{Binding num_room}" SelectionChanged="UserList_cb_SelectionChanged"/>
-                            <TextBox  x:Name="NumberRoom_tb" Grid.Row="1" TextAlignment="Center"  Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" Width="754"/>
-                            <TextBox x:Name="CountRoom_tb" Grid.Row="2" TextAlignment="Center"  Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" Width="754"/>
-                            <TextBox x:Name="Capacity_tb" Grid.Row="3" TextAlignment="Center"  Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" Width="754"/>
-                            <ComboBox x:Name="TypeRoom_tb" Grid.Row="4"  Height="35" HorizontalAlignment="Center" Width="754"/>
-                            <TextBox x:Name="ShortDescription_tb" Grid.Row="5" TextAlignment="Center"  Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" Width="754"/>
-                            <ComboBox x:Name="StatusRoom_tb" Grid.Row="6"  HorizontalAlignment="Center" Margin="5" Width="754" />
-                            <TextBox x:Name="Price_tb" Grid.Row="7" TextAlignment="Center" Height="23" VerticalAlignment="Center" HorizontalAlignment="Center" Width="754"/>
+                            <TextBox  x:Name="NumberRoom_tb" Grid.Row="1" TextAlignment="Center"  Height="35" VerticalAlignment="Center" HorizontalAlignment="Left" Width="400" Margin="364,0,0,0"/>
+                            <Label Grid.Row="1" HorizontalAlignment="Left" Content="Номер Комнаты" VerticalAlignment="Center" Margin="50,0" />
+                            <TextBox x:Name="CountRoom_tb" Grid.Row="2" TextAlignment="Center"  Height="35" VerticalAlignment="Center" HorizontalAlignment="Left" Width="400" Margin="364,0,0,0"/>
+                            <Label Grid.Row="2" HorizontalAlignment="Left" Content="Количество комнат" VerticalAlignment="Center" Margin="50,0" />
+                            <TextBox x:Name="Capacity_tb" Grid.Row="3" TextAlignment="Center"  Height="35" VerticalAlignment="Center" HorizontalAlignment="Left" Width="400" Margin="364,0,0,0"/>
+                            <Label Grid.Row="3" HorizontalAlignment="Left" Content="Вместимость" VerticalAlignment="Center" Margin="50,0" />
+                            <ComboBox x:Name="TypeRoom_tb" Grid.Row="4"  Height="35" HorizontalAlignment="Left" Width="400" Margin="364,6,0,0" VerticalAlignment="Top"/>
+                            <Label Grid.Row="4" HorizontalAlignment="Left" Content="Тип" VerticalAlignment="Center" Margin="50,0" />
+                            <TextBox x:Name="ShortDescription_tb" Grid.Row="5" TextAlignment="Center"  Height="35" VerticalAlignment="Center" HorizontalAlignment="Left" Width="500" Margin="265,0,0,0"/>
+                            <Label Grid.Row="5" HorizontalAlignment="Left" Content="Короткое описание" VerticalAlignment="Center" Margin="50,0" />
+                            <ComboBox x:Name="StatusRoom_tb" Grid.Row="6"  HorizontalAlignment="Left" Width="400" Margin="364,0,0,0" />
+                            <Label Grid.Row="6" HorizontalAlignment="Left" Content="Статус" VerticalAlignment="Center" Margin="50,0" />
+                            <TextBox x:Name="Price_tb" Grid.Row="7" TextAlignment="Center" Height="23" VerticalAlignment="Center" HorizontalAlignment="Left" Width="400" Margin="364,0,0,0"/>
+                            <Label Grid.Row="7" HorizontalAlignment="Left" Content="Цена" VerticalAlignment="Center" Margin="50,0" />
                             <Button x:Name="DeleteRoom_btn" Content="Удалить" HorizontalAlignment="Left" Margin="582,39,0,0" Grid.Row="8" VerticalAlignment="Top" Height="24" Width="182" Click="DeleteRoom_btn_Click"/>
                             <Button x:Name="AddRoom_btn" Content="Добавить" Margin="0,10,10,0" HorizontalAlignment="Right" Width="182" Height="24" VerticalAlignment="Top" Click="AddRoom_btn_Click" Grid.Row="8"/>
                             <Button x:Name="EditStatusRoom_btn" Content="Редактор статуса" HorizontalAlignment="Left" Margin="10,39,0,0" Grid.Row="8" VerticalAlignment="Top" Height="24" Width="214" Click="EditStatusRoom_btn_Click"/>

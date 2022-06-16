@@ -154,9 +154,8 @@ namespace Andreeva_TZv2
 
         private void btnAddUser_Click(object sender, RoutedEventArgs e)
         {
-            SUserAddUser addUserWin = new SUserAddUser(null);
+            SUserAddUser addUserWin = new SUserAddUser();
             addUserWin.ShowDialog();
-            
         }
 
         private void btnDeleteUser_Click(object sender, RoutedEventArgs e)
@@ -217,12 +216,14 @@ namespace Andreeva_TZv2
         {
             EditorTypeRoom win = new EditorTypeRoom();
             win.ShowDialog();
+            FillListRoom();
         }
 
         private void EditStatusRoom_btn_Click(object sender, RoutedEventArgs e)
         {
             EditorStatusRoom win = new EditorStatusRoom();
             win.ShowDialog();
+            FillListRoom();
         }
     }
 }

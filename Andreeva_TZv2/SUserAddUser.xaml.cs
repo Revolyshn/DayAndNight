@@ -10,16 +10,12 @@ namespace Andreeva_TZv2
     /// </summary>
     public partial class SUserAddUser : Window
     {
-        private BD.user _currentUser = new BD.user();
-
-        public SUserAddUser(BD.user selectedPerson)
+        public SUserAddUser()
         {
-            if (selectedPerson != null)
-                _currentUser = selectedPerson;
 
             InitializeComponent();
 
-            DataContext = _currentUser;
+            
             CbUserStatus.ItemsSource = BD.DayAndNightEntities.GetContext().user_status.ToList();
             CbUserRole.ItemsSource = BD.DayAndNightEntities.GetContext().role.Where(a => a.name != "Super_User").ToList();
 
