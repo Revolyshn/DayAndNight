@@ -57,7 +57,7 @@ namespace Andreeva_TZv2
             
                 if (Login.Text != null)
             {
-                string login = Login.Text;
+                    string login = Login.Text;
 
                 if (Password.Password != null || Password.Password != "Введите пароль")
                 {

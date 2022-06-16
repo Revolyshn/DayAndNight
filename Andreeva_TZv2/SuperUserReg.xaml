@@ -15,11 +15,13 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="regSuperUser_btn" Content="Зарегестрироваться" Width="200" Height="40" Margin="20" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Top" Click="regSuperUser_btn_Click"/>
-        <TextBox x:Name="loginSuperUser_tb" Style="{DynamicResource TextBoxK}" HorizontalAlignment="Center" Margin="0,40,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="32" Height="40" Width="150"/>
-        <PasswordBox x:Name="passwordSuperUser_tb" HorizontalAlignment="Center" Margin="0,40,0,0" Grid.Row="2"  VerticalAlignment="Top" FontSize="32" Height="40" Width="150"/>
-        <TextBox x:Name="nameSuperUser_tb" Style="{DynamicResource TextBoxK}" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" FontSize="32" Height="40" Width="150"/>
-
+        <Button  x:Name="regSuperUser_btn" Content="Зарегестрироваться" Margin="30" Width="250" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Bottom" Click="regSuperUser_btn_Click"/>
+        <TextBox  x:Name="loginSuperUser_tb" HorizontalAlignment="Center" Margin="0,40,0,0" Grid.Row="1" VerticalAlignment="Top" MaxLength="32" FontSize="18" Width="200" />
+        <PasswordBox x:Name="passwordSuperUser_tb" HorizontalAlignment="Center" Margin="0,40,0,0" Grid.Row="2"  VerticalAlignment="Top" FontSize="18" MaxLength="32" Width="200"/>
+        <TextBox x:Name="nameSuperUser_tb"  HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" FontSize="18" MaxLength="80" Width="200"/>
+        <Label Content="ФИО" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Grid.Row="1" Content="Логин" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Grid.Row="2" Content="Пароль" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

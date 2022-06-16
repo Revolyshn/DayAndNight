@@ -12,19 +12,19 @@
         <Border Grid.Row="1" Grid.Column="1" Margin="0,10,10,10" Background = "#FF545454">
             <Grid>
 
-                <TextBlock Text="Логин клиента: " RenderTransformOrigin="0.515,0.486" Margin="13,47,228,348" Foreground="Black"/>
+                <Label Content="Логин клиента: " RenderTransformOrigin="0.515,0.486" Margin="13,47,228,348"/>
                 <ComboBox Name="LoginClient" HorizontalAlignment="Left" Margin="177,44,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.5,0.565" Height="23"/>
 
-                <TextBlock Text="Забронированный номер: " Margin="10,108,190,287" Foreground="Black" />
+                <Label Content="Забронированный номер: " Margin="10,108,190,287"  />
 
-                <TextBlock Text="Причина раннего ухода: " Margin="10,197,113,197" Foreground="Black" />
+                <Label Content="Причина раннего ухода: " Margin="10,197,113,197" />
                 <TextBox Foreground="DarkGray" Background="Transparent" x:Name="Comment" Height="98" Margin="10,232,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
                 <Label Content="Дата отбытия:" Margin="132,335,132,59"/>
-                <TextBox Foreground="DarkGray" x:Name="DataOtbitiya" Style="{DynamicResource TextBoxK}" HorizontalAlignment="Center" Height="30" Margin="0,331,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" FontSize="14"/>
+                <TextBox Foreground="DarkGray" x:Name="DataOtbitiya" HorizontalAlignment="Center" Height="30" Margin="0,331,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" FontSize="14"/>
 
                 <ComboBox Name="NumberRoom" HorizontalAlignment="Left" Margin="177,105,0,0" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.5,0.565" Height="23"/>
 
-                <Button Foreground="White" Background="#FF1D1D1D" Content="Освободить номер" Margin="10,366,10,10" Click="Button_Click"/>
+                <Button Foreground="White"  Content="Освободить номер" Margin="10,366,10,10" Click="Button_Click"/>
 
             </Grid>
         </Border>

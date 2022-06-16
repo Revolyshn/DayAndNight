@@ -15,25 +15,36 @@ namespace Andreeva_TZv2.BD
     
     public partial class DayAndNightEntities : DbContext
     {
+        private static DayAndNightEntities _instance;
+
         public DayAndNightEntities()
             : base("name=DayAndNightEntities")
         {
         }
-    
+
+        public static DayAndNightEntities GetContext()
+        {
+            if (_instance == null)
+                _instance = new DayAndNightEntities();
+
+            return _instance;
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<blocking> blocking { get; set; }
         public virtual DbSet<booking_history> booking_history { get; set; }
         public virtual DbSet<borrow_room> borrow_room { get; set; }
         public virtual DbSet<client> client { get; set; }
         public virtual DbSet<info_room> info_room { get; set; }
         public virtual DbSet<role> role { get; set; }
-        public virtual DbSet<status_user> status_user { get; set; }
+        public virtual DbSet<room_status> room_status { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<type_room> type_room { get; set; }
         public virtual DbSet<user> user { get; set; }
-        public virtual DbSet<blocking> blocking { get; set; }
+        public virtual DbSet<user_status> user_status { get; set; }
     }
 }

@@ -15,7 +15,7 @@
         <TextBox Background="Transparent" BorderThickness="0" Foreground="Gray" Margin="103,176,0,86" RenderTransformOrigin="0.493,0.508" HorizontalAlignment="Left" Width="55" x:Name="CountRoom" IsReadOnly="True"/>
         <Label Foreground="White" Margin="10,204,139,47" Content="Стоимость:"/>
         <TextBox Background="Transparent" BorderThickness="0" Foreground="Gray" Margin="89,210,0,47" RenderTransformOrigin="0.493,0.508" HorizontalAlignment="Left" Width="86" x:Name="Price" IsReadOnly="True"/>
-        <Button BorderThickness="0"  Content="Выбрать комнату" Margin="57,246,57,10" Click="Button_Click" FontFamily="Yu Gothic UI Semibold"/>
+        <Button BorderThickness="0"  Content="Выбрать комнату"  Click="Button_Click" VerticalAlignment="Bottom" Margin="10"/>
     </Grid>
 
 </Page>

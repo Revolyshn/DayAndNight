@@ -26,7 +26,7 @@ namespace Andreeva_TZv2
         }
         void CheckExistSUser()
         {
-            BD.user super_admin = Lib.Connector.DataBase().user.FirstOrDefault(a => a.role != null && a.role == "Super_User");
+            BD.user super_admin = Lib.Connector.DataBase().user.FirstOrDefault(a => a.role == "Super_User");
             if (super_admin == null)
             {
                 SUserFrame.Navigate(Lib.Pages.registration);

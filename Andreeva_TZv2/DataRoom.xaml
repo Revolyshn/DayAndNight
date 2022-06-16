@@ -24,7 +24,7 @@
 
                 <ListBox Margin="10,123,261,10" x:Name="ListRoom" Background="Transparent"/>
 
-                <Button  BorderThickness="0" Content="Найти" Margin="10,91,312,225" Foreground="White" Background="#FF1D1D1D" Click="Button_Click"/>
+                <Button  BorderThickness="0" Content="Найти" Margin="10,91,261,220"   Click="Button_Click"/>
 
                 <Frame x:Name="InfoRoom" Margin="130,55,10,10"/>
 

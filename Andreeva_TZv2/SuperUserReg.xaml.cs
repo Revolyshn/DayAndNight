@@ -29,7 +29,7 @@ namespace Andreeva_TZv2
         {
             BD.user SuperUser;
             BD.role role;
-            BD.status_user status;
+            BD.user_status status;
 
             if (loginSuperUser_tb != null && passwordSuperUser_tb != null && nameSuperUser_tb != null)
             {
@@ -41,7 +41,7 @@ namespace Andreeva_TZv2
                     name = "Super_User"
                 };
 
-                status = new BD.status_user
+                status = new BD.user_status
                 {
                     name = "Работает"
                 };
@@ -49,14 +49,14 @@ namespace Andreeva_TZv2
                 if (roleUser == null && statusUser == null)
                 {
                     Lib.Connector.DataBase().role.Add(role);
-                    Lib.Connector.DataBase().status_user.Add(status);
+                    Lib.Connector.DataBase().user_status.Add(status);
                 }
 
                 SuperUser = new BD.user
                 {
                     name = nameSuperUser_tb.Text,
                     role = role.name,
-                    user_status = status.name,
+                    status = status.name,
                     password = passwordSuperUser_tb.Password,
                     login = loginSuperUser_tb.Text,
                 };

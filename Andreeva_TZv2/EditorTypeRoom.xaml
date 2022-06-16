@@ -1,0 +1,28 @@
+﻿<Window x:Class="Andreeva_TZv2.EditorTypeRoom"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Andreeva_TZv2"
+        mc:Ignorable="d"
+        Title="EditorTypeRoom" Height="300" Width="500"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        IsVisibleChanged="Window_IsVisibleChanged">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" x:Name="ListTR" VerticalAlignment="Top" Height="200" BorderThickness="2" BorderBrush="Gray">
+            <DataGrid.Columns>
+                <DataGridTextColumn FontSize="18" CanUserResize="False" Binding="{Binding name}" Header="Типы комнат" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnDeleteTR" Content="Удалить" VerticalAlignment="Bottom"  HorizontalAlignment="Right" Margin="3" Click="btnDeleteTR_Click"/>
+        <Button x:Name="btnAddTR" Content="Добавить" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="3" Click="btnAddTR_Click"/>
+        <TextBox x:Name="tbNameTR" VerticalAlignment="Bottom" TextAlignment="Center" Width="200" Margin="5"/>
+    </Grid>
+</Window>

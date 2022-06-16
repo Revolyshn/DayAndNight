@@ -24,11 +24,13 @@ namespace Andreeva_TZv2.BD
         public int count_room { get; set; }
         public int capacity { get; set; }
         public string type_room { get; set; }
-        public string short_description { get; set; }
         public decimal price { get; set; }
+        public string short_description { get; set; }
+        public string status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<borrow_room> borrow_room { get; set; }
+        public virtual room_status room_status { get; set; }
         public virtual type_room type_room1 { get; set; }
     }
 }

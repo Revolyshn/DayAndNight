@@ -10,7 +10,7 @@ namespace Andreeva_TZv2.Lib
     {
         private static BD.DayAndNightEntities basa = new BD.DayAndNightEntities();
 
-        private static BD.status_user status = new BD.status_user();
+        private static BD.user_status status = new BD.user_status();
         private static BD.user user = new BD.user();
         private static BD.booking_history booking = new BD.booking_history();
         private static BD.borrow_room borrow = new BD.borrow_room();
@@ -21,7 +21,7 @@ namespace Andreeva_TZv2.Lib
         {
             return basa;
         }
-        public static BD.status_user Status()
+        public static BD.user_status Status()
         {
             return status;
         }
@@ -51,6 +51,6 @@ namespace Andreeva_TZv2.Lib
         public static SuperUserReg registration = new SuperUserReg();
         public static SUserAuth authorization = new SUserAuth();
         public static SUserHome Home = new SUserHome();
-        public static SUserFunctional functional = new SUserFunctional();
+        public static SUserFunctional functional = new SUserFunctional(null);
     }
 }

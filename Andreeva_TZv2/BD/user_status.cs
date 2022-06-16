@@ -12,10 +12,10 @@ namespace Andreeva_TZv2.BD
     using System;
     using System.Collections.Generic;
     
-    public partial class status_user
+    public partial class user_status
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public status_user()
+        public user_status()
         {
             this.user = new HashSet<user>();
         }
